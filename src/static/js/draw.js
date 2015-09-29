@@ -177,18 +177,18 @@ function onMouseDown(event) {
     return;
   }
 
-  mouseTimer = 0;
-  mouseHeld = setInterval(function() { // is the mouse being held and not dragged?
-    mouseTimer++;
-    if (mouseTimer > 5) {
-      mouseTimer = 0;
-      $('#mycolorpicker').toggle(); // show the color picker
-      $('#mycolorpicker').css({
-        "left": event.event.pageX - 250,
-        "top": event.event.pageY - 100
-      }); // make it in the smae position
-    }
-  }, 100);
+//   mouseTimer = 0;
+//   mouseHeld = setInterval(function() { // is the mouse being held and not dragged?
+//     mouseTimer++;
+//     if (mouseTimer > 5) {
+//       mouseTimer = 0;
+//       $('#mycolorpicker').toggle(); // show the color picker
+//       $('#mycolorpicker').css({
+//         "left": event.event.pageX - 250,
+//         "top": event.event.pageY - 100
+//       }); // make it in the same position
+//     }
+//   }, 100);
 
   if (activeTool == "draw" || activeTool == "pencil") {
     var point = event.point;
