@@ -1,7 +1,15 @@
 <html>
-        <script> 
-      
-            function go2Random() 
+    <head>
+        <script src='/static/js/lib/omlet.js'></script>
+    </head>
+        <script>
+            function go2GroupRoom(){
+
+              var authorColor = getParameterByName('authorColor');
+              window.location = "d/" + Omlet.scope.feed_key + (authorColor != "") ?
+                "?authorColor=" + authorColor : "";
+            }
+            function go2Random()
             {
                 var authorColor = getParameterByName('authorColor');
                 if (authorColor != "") {
@@ -10,13 +18,13 @@
                     window.location = "d/" + randomPadName();
                 }
             }
- 
-            function randomPadName() 
+
+            function randomPadName()
             {
                 var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
                 var string_length = 10;
                 var randomstring = '';
-                for (var i = 0; i < string_length; i++) 
+                for (var i = 0; i < string_length; i++)
                 {
                     var rnum = Math.floor(Math.random() * chars.length);
                     randomstring += chars.substring(rnum, rnum + 1);
@@ -37,7 +45,8 @@
                     return decodeURIComponent(results[1].replace(/\+/g, " "));
                 }
             }
-            
-           go2Random();
+
+          //  go2Random();
+          Omlet.ready(go2GroupRoom);
         </script>
 </html>
