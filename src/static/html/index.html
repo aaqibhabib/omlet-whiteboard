@@ -44,6 +44,12 @@
             }
 
           //  go2Random();
-          Omlet.ready(go2GroupRoom);
+          Omlet.ready(function(){
+            if(Omlet.isInstalled()){
+              go2GroupRoom();
+            } else {
+              go2Random();
+            }
+          }
         </script>
 </html>
