@@ -5,9 +5,7 @@
         <script>
             function go2GroupRoom(){
 
-              var authorColor = getParameterByName('authorColor');
-              window.location = "d/" + Omlet.scope.feed_key + (authorColor != "") ?
-                "?authorColor=" + authorColor : "";
+              window.location = "d/" + Omlet.scope.feed_key;
             }
             function go2Random()
             {
